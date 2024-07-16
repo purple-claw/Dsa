@@ -1,0 +1,9 @@
+Recursive Tree (String to Integer)
+
+recursiveParse("  -42", 0, 1, 0, False)
+  └── recursiveParse("  -42", 1, 1, 0, False)
+        └── recursiveParse("  -42", 2, 1, 0, False)
+              └── recursiveParse("  -42", 3, -1, 0, True)
+                    └── recursiveParse("  -42", 4, -1, 4, True)
+                          └── recursiveParse("  -42", 5, -1, 42, True)
+                                └── Return -42 (Base case: end of string)
